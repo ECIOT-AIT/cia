@@ -1,7 +1,7 @@
 
-(()=>{
+(() => {
     var api = 'test.ciadev.ninja';
-    
+
     let url = 'http://' + api + '/api/v2/events/?format=json';
     var xmlhttp = new XMLHttpRequest();
 
@@ -15,4 +15,4 @@
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 
-})();
+})/* () */;

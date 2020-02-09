@@ -1,10 +1,9 @@
-(() => {
-    var api = 'test.ciadev.ninja';
+((api = 'test.ciadev.ninja') => {
+    
     function createEventCard(event) {
         let parent = document.querySelector('.event-list');
         let eventcard = document.createElement('li');
-
-        eventcard.innerHTML = `<div class="date">
+        saferInnerHTML(eventcard, `<div class="date">
                         <span>${event.month}</span>
                         <h1>${event.date}</h1>
                     </div>
@@ -17,10 +16,12 @@
                             ${event.title}
                         </h1>
                         <p>${event.discription}</p>
-                    </div>`;
+                    </div>` );
+        
         parent.appendChild(eventcard);
     }
     function createRecentEventCard(event) {
+        
         let eventTag = document.querySelector('.event-tag');
         let monthNode = document.querySelector('.date span');
         let dateNode = document.querySelector('.date h1');
@@ -118,8 +119,9 @@
     };
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
-
+    window.api = api;
 })();
+
 
 
 
