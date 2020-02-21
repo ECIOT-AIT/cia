@@ -613,7 +613,7 @@ img {
     padding-top: 15px;
     padding-bottom: 15px;
 
-    background: rgb(15, 15, 15);
+    background: rgb(15, 15, 20);
 
 }
 
@@ -856,7 +856,7 @@ footer {
     color: whitesmoke;
 }
 
-.credit a{
+.credit a {
     color: var(--accentColor);
 }
 
